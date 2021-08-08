@@ -1,0 +1,215 @@
+#main {
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    border: 1px solid black;
+    margin: 10vh auto;  
+    overflow: hidden;
+    background-image: linear-gradient(180deg, rgba(19, 42, 105), rgba(15, 95, 96));
+    filter: blur(20px);
+    animation: blur 1s ease-in 1 forwards;
+}
+@keyframes blur {
+    0% {
+        filter: blur(20px);  
+    }
+    100% {
+        filter: blur(0px);  
+    }
+}
+
+#inner {
+    position: relative;
+  }
+
+#bgimg {
+    position: absolute;
+    object-fit: fill;
+    animation: img 5s ease-out 1 forwards;
+    min-height: 100vh;
+}
+@keyframes img {
+    0% {
+        opacity: 0;
+        width: 1920px;
+        height: 1080px;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#ball {
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    margin: 30vh 0px 0px 53vw;
+    opacity: 0;
+    transform: rotate(0deg);
+    -webkit-animation: bounce 5s linear 5s 1 forwards, goal 3s linear 10.5s 1 forwards, spin 3s linear 10.5s infinite;
+}
+@keyframes bounce {
+    0% {
+        opacity: 1;
+        margin: 25vh 0px 0px 53vw;
+    }
+    20% {
+        opacity: 1;
+        margin: 67vh 0px 0px 53vw;
+    }
+    40% {
+        opacity: 1;
+        margin: 40vh 0px 0px 53vw;
+    }
+    60% {
+        opacity: 1;
+        margin: 67vh 0px 0px 53vw;
+    }
+    80% {
+        opacity: 1;
+        margin: 50vh 0px 0px 53vw;
+    }
+    100% {
+        opacity: 1;
+        margin: 67vh 0px 0px 53vw;
+    }
+}
+@keyframes goal {
+    0% {
+        margin: 67vh 0px 0px 53vw;
+    }
+    100% {
+        margin: 55vh 0px 0px 65vw;
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#run {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    margin: 62vh 0px 0px 0px;
+    opacity: 0;
+    -webkit-animation: run 2.5s ease-in-out 5.5s 1 forwards, disappear 1s ease 8s 1 forwards;
+}
+@keyframes run {
+    0% {
+        width: 5vw;
+        height: 5vw;
+        opacity: 1;
+    }
+    100% {
+        width: 13vw;
+        height: 10vw;
+        margin: 56vh 0px 0px 20vw;
+        opacity: 1;
+    }
+}
+@keyframes disappear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#mario {
+    position: absolute;
+    width: 13vw;
+    height: 10vw;
+    margin: 56vh 0px 0px 20vw;
+    opacity: 0;
+    -webkit-animation: kick 2.5s ease-in-out 8s 1 forwards, disappear 1s ease 13.3s 1 forwards;
+}
+@keyframes kick {
+    0% {
+        margin: 56vh 0px 0px 20vw;
+        opacity: 1;
+    }
+    100% {
+        margin: 57vh 0px 0px 40.5vw;
+        opacity: 1;
+    }
+}
+@keyframes disappear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#happy {
+    position: absolute;
+    width: 13vw;
+    height: 10vw;
+    opacity: 0;
+    animation: happy 3s ease 13.3s infinite alternate;
+    margin: 57vh 0px 0px 40.5vw;
+}
+@keyframes happy {
+    0% {
+        opacity: 1;
+        margin: 57vh 0px 0px 40.5vw;
+    }
+    25% {
+        opacity: 1;
+        margin: 50vh 0px 0px 40.5vw;
+    }
+    50% {
+        opacity: 1;
+        margin: 57vh 0px 0px 40.5vw;
+    }
+    75% {
+        opacity: 1;
+        margin: 45vh 0px 0px 40.5vw;
+    }
+    100% {
+        opacity: 1;
+        margin: 57vh 0px 0px 40.5vw;
+    }
+}
+
+#text {
+    position: absolute;
+    opacity: 0;
+    margin: 70vh 0px 0px 55vw;
+    animation: goal-text 2s ease-in 13.3s alternate infinite;
+    color: yellow;
+    font-size: 5vh;
+}
+@keyframes goal-text {
+    0% {
+        opacity: 1;
+        color: yellow;
+        font-size: 5vh;
+    }
+    100% {
+        opacity: 1;
+        color: red;
+        font-size: 7vh;
+    }
+} 
+
+/* Responsive div only:
+#main{
+    position: relative;
+    width: 75vw;
+    height: 80vh;
+    border: 1px solid black;
+    margin: 10vh auto;   
+} */
